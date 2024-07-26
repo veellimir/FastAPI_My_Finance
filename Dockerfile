@@ -6,7 +6,7 @@ WORKDIR /crm_finance
 
 COPY requirements.txt .
 
-RUN pip install -upgradde pip
+RUN pip install -upgrade pip
 RUN pip install requirements.txt
 
 COPY . .
