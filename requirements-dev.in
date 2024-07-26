@@ -4,3 +4,4 @@ fastapi-users[sqlalchemy]
 alembic
 asyncpg
 black
+gunicorn
