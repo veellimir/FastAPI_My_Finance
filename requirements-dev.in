@@ -1,6 +1,6 @@
 fastapi[all]
 sqlalchemy
-'fastapi-users[sqlalchemy]'
+fastapi-users[sqlalchemy]
 alembic
 asyncpg
 black

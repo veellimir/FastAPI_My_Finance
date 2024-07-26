@@ -10,6 +10,8 @@ from alembic import context
 from app.config.repository.base import Base
 from app.config.project_config import settings
 
+from app.main.users.models import User
+
 config = context.config
 fileConfig(config.config_file_name)
 
