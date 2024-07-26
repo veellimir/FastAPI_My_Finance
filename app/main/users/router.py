@@ -6,7 +6,7 @@ from app.main.users.schemas import SchemUserRead
 
 router = APIRouter(
     prefix="/users",
-    tags=["Users"]
+    tags=["Пользователи"]
 )
 
 
