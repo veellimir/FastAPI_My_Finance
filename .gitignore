@@ -4,3 +4,4 @@ venv
 app/tests
 .env
 .env-dev
+.env-non-dev

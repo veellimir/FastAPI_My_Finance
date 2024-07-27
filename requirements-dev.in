@@ -5,4 +5,3 @@ alembic
 asyncpg
 black
 gunicorn
-psycopg2
