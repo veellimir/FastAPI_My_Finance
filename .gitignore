@@ -2,5 +2,6 @@ __pycache__/
 .idea
 venv
 app/tests
-.env-prod
+.env
 .env-dev
+.env-non-dev
