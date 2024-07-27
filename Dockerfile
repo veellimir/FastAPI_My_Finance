@@ -11,8 +11,6 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-RUN pip install psycopg2
-
 COPY . .
 
 RUN chmod a+x /crm_finance/wait-for-db.sh
