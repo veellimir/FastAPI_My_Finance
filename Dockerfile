@@ -13,7 +13,16 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN chmod a+x /crm_finance/wait-for-db.sh
+# Скопировать скрипт wait-for-it.sh в контейнер
+COPY wait-for-it.sh /crm_finance/wait-for-it.sh
 
+# Сделать скрипт исполняемым
+RUN chmod +x /crm_finance/wait-for-it.sh
+
+# Использовать wait-for-it.sh для ожидания готовности базы данных перед выполнением миграций Alembic
+RUN #/crm_finance/wait-for-it.sh postgres:5432 -t 60 -- alembic upgrade head
 
 CMD ["gunicorn", "main:app", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind=0.0.0.0:8000"]
+
+
+
